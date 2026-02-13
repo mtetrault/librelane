@@ -70,12 +70,13 @@ in
     pname = "openroad";
     version = rev-date;
 
-    src = fetchFromGitHub {
-      owner = "The-OpenROAD-Project";
-      repo = "OpenROAD";
-      inherit rev;
-      inherit sha256;
-    };
+    #src = fetchFromGitHub {
+    #  owner = "The-OpenROAD-Project";
+    #  repo = "OpenROAD";
+    #  inherit rev;
+    #  inherit sha256;
+    #};
+    src = ~/Downloads/OpenROAD-341650e72dad0dc8571822ff8c5d9c5e365327f7.tar.gz
 
     cmakeFlags =
       (cmakeFlagsCommon false)
